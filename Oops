@@ -1,0 +1,108 @@
+constructor and desctructor
+destructor is used to realse the memory of the specific  class which is contain the propertry and method 
+
+II)where we use the class first  call the constructor the  next proprty and method call
+
+access modifire:
+1)public :we can access every in the project it's mean out side the class
+2) protect:we can access only within the class and extended(derives) class only 
+3)private:in that we can call only in the class 
+
+Inheritance
+ -perent class  attribute and method  we can use the in the child class to use the extend method  
+example:-
+like controller or model in framwork we also use the inheritance to extenad the base controller
+
+Final
+there is some method or property is present in the class and class also  that we don't want to changes or override or inherit the thes method or property so in this case we use the final access modifire
+example:- final $test;
+ final function tese(){
+}
+final class{
+}
+
+constant 
+constant varibale is that we dont want to changes it's remain same for every one 
+and to access the constant variable we use scop resolution operator(::)
+and some case we want to use the constant varibale in side function in same
+class for that we use self::DB_NAME
+example:- post::DB_NAME
+post is class which that containe the constant varibale name DB_NAME is the varibale which that we want to access
+
+public function getdbname(){
+echo self::DB_NAME
+}
+
+abstract class (abstrac class khud ka object nahi bana sakta hai woh 
+child class se pair karke then object creat karke hi  property or method ko use kar sakta hai)
+abstract class is only use in the child class not it's own class so it's mean 
+abstract class can not creat the own object and use the property and method 
+it's only use in the child class to used extends  then  with help of child class we can 
+creat the object and use that object.
+in abstraction only declare the method and wright in child class  
+
+interface 
+interface is also the same as abstraction but in interface we cannot use privete or perotected access modifire and interface we can implement in multiple interface  but in abstraction we can only extend the one class at a time 
+
+-in the interface we can not use the protect and prviate access modifire 
+-if inherit the or impliment to child class so it is mendotry to use that parent function   
+in this class
+-interface is same like the abstract class  not the 100% we can say 50%  same like we can only define the function can not  use the that function it self
+and inheritance can not the cointructor or destructor 
+- interface having the multiple inheritance 
+explample;-
+interface interfaceName1{
+  public function functionName();
+} 
+interface interfaceName2{
+public function functionName2();
+} 
+
+interface interfaceName3{
+public function functionName3();
+
+} 
+
+ class className implement  interfaceName1, interfaceName2,interfaceName3 {
+        public function functionName2(){
+           echo "print function one"
+        } 
+       public function functionName2(){
+                    echo "print function two"
+        } 
+        public function functionName3(){
+                  echo "print function three"
+        } 
+
+
+}
+trait
+is the class we can dfine  method in side the class and that can class or method we can use the all of the project ex- controller and model and anywahere trait we use in that case some time we donet want to extends the  class1  method to class 4  but layer of inheritance it's showing in  that class which we dont want to use  so such case we use the trait class 
+example-
+trait className{
+
+public sum(){
+    echo 2+8;
+}
+
+}
+class class2{
+ use className;
+
+public function usetrait(){
+$this->sum();
+}
+
+}
+
+
+
+polymorphisam 
+-polymorphisam is the one or same function can perform the many action that we can say polymorphisam
+-abstract class or abstrac method is also the example of polymorphisam 
+(in he abstrac we can only define the function and excute we can only excute in the child class)
+
+ 
+
+
+
